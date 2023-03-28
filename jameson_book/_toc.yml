@@ -1,0 +1,16 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+parts:
+  - caption: Introduction
+    chapters:
+      - file: markdown.md
+      - file: notebooks.ipynb
+      - file: data_load.md
+  - caption: Advanced
+    chapters:
+      - file: markdown-notebooks.md
+      - file: tables.md
+      - file: easy_way_to_seem_great_coding.md

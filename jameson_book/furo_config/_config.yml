@@ -1,0 +1,62 @@
+# Book settings
+# Learn more at https://jupyterbook.org/customize/config.html
+
+title: My sample book
+author: The Jupyter Book Community
+logo: logo.png
+
+# Force re-execution of notebooks on each build.
+# See https://jupyterbook.org/content/execute.html
+execute:
+  execute_notebooks: force
+
+# Define the name of the latex output file for PDF builds
+latex:
+  latex_documents:
+    targetname: book.tex
+
+# Information about where the book exists on the web
+repository:
+  url: https://github.com/executablebooks/jupyter-book # Online location of your book
+  path_to_book: docs # Optional path to your book, relative to the repository root
+  branch: master # Which branch of the repository should be used when creating links (optional)
+
+# Add GitHub buttons to your book
+# See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
+html:
+  static_path: [_static]
+  extra_css: [_static/custom.css]
+
+sphinx:
+  config:
+    html_theme: pydata_sphinx_theme
+    html_theme_options: {}
+    pygstyles_style: default
+    number_source_lines: true
+
+  extra_extensions: [sphinxcontrib.sass, sphinx_design, myst_nb]
+
+sass:
+  sass_src_dir: _sass
+  sass_out_dir: _static/css
+  sass_targets: { custom.scss: custom.css }
+
+  parse:
+  myst_enable_extensions:
+    - dollarmath
+    - amsmath
+    - deflist
+    - fieldlist
+    - html_admonition
+    - html_image
+    - colon_fence
+    - smartquotes
+    - replacements
+    - linkify
+    - strikethrough
+    - substitution
+    - tasklist
+    - attrs_block
+    - attrs_inline
+    - myst_highlight_code_blocks
+    - myst_heading_slug_func
