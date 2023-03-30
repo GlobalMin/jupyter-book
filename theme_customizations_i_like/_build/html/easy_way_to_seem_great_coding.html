@@ -1,0 +1,938 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>This is all directly from a live Jupyter nb &#8212; My sample book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d" />
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'easy_way_to_seem_great_coding';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Tables" href="tables.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Python code quality for data science
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Introduction</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="markdown.html">Markdown Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks.html">Content with notebooks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_load.html">Data load</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Advanced</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="markdown-notebooks.html">Notebooks with MyST Markdown</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tables.html">Tables</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">This is all directly from a live Jupyter nb</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/easy_way_to_seem_great_coding.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>This is all directly from a live Jupyter nb</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-skimpy-to-automate-a-lot-of-this">Using skimpy to automate a lot of this</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pandas-profiling">Pandas profiling</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sidenotes-and-marginnotes">Sidenotes and marginnotes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nested-admonitions">Nested admonitions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#myst-markdown-elements">MyST Markdown elements</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#table-alignment">Table alignment</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#list-table-width">List table width</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="this-is-all-directly-from-a-live-jupyter-nb">
+<h1>This is all directly from a live Jupyter nb<a class="headerlink" href="#this-is-all-directly-from-a-live-jupyter-nb" title="Permalink to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="c1"># load data</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;_static/example.csv&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>          objid          ra       dec         u         g         r         i  \
+0  1.237650e+18  183.531326  0.089693  19.47406  17.04240  15.94699  15.50342   
+1  1.237650e+18  183.598370  0.135285  18.66280  17.21449  16.67637  16.48922   
+2  1.237650e+18  183.680207  0.126185  19.38298  18.19169  17.47428  17.08732   
+3  1.237650e+18  183.870529  0.049911  17.76536  16.60272  16.16116  15.98233   
+4  1.237650e+18  183.883288  0.102557  17.55025  16.26342  16.43869  16.55492   
+
+          z  run  rerun  camcol  field     specobjid   class  redshift  plate  \
+0  15.22531  752    301       4    267  3.722360e+18    STAR -0.000009   3306   
+1  16.39150  752    301       4    267  3.638140e+17     QSO -0.000055    323   
+2  16.80125  752    301       4    268  3.232740e+17  GALAXY  0.123111    287   
+3  15.90438  752    301       4    269  3.722370e+18    STAR -0.000111   3306   
+4  16.61326  752    301       4    269  3.722370e+18    STAR  0.000590   3306   
+
+     mjd  fiberid partition  
+0  54922      491        V2  
+1  51615      541        V1  
+2  52023      513        V2  
+3  54922      510        V2  
+4  54922      512         H  
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_scroll-output tag_scroll_output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Describe the columns one by one</span>
+<span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">c</span><span class="p">]</span><span class="o">.</span><span class="n">describe</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>count    1.000000e+04
+mean     1.237650e+18
+std      0.000000e+00
+min      1.237650e+18
+25%      1.237650e+18
+50%      1.237650e+18
+75%      1.237650e+18
+max      1.237650e+18
+Name: objid, dtype: float64
+count    10000.000000
+mean       175.529987
+std         47.783439
+min          8.235100
+25%        157.370946
+50%        180.394514
+75%        201.547279
+max        260.884382
+Name: ra, dtype: float64
+count    10000.000000
+mean        14.836148
+std         25.212207
+min         -5.382632
+25%         -0.539035
+50%          0.404166
+75%         35.649397
+max         68.542265
+Name: dec, dtype: float64
+count    10000.000000
+mean        18.619355
+std          0.828656
+min         12.988970
+25%         18.178035
+50%         18.853095
+75%         19.259232
+max         19.599900
+Name: u, dtype: float64
+count    10000.000000
+mean        17.371931
+std          0.945457
+min         12.799550
+25%         16.815100
+50%         17.495135
+75%         18.010145
+max         19.918970
+Name: g, dtype: float64
+count    10000.000000
+mean        16.840963
+std          1.067764
+min         12.431600
+25%         16.173333
+50%         16.858770
+75%         17.512675
+max         24.802040
+Name: r, dtype: float64
+count    10000.000000
+mean        16.583579
+std          1.141805
+min         11.947210
+25%         15.853705
+50%         16.554985
+75%         17.258550
+max         28.179630
+Name: i, dtype: float64
+count    10000.000000
+mean        16.422833
+std          1.203188
+min         11.610410
+25%         15.618285
+50%         16.389945
+75%         17.141447
+max         22.833060
+Name: z, dtype: float64
+count    10000.000000
+mean       981.034800
+std        273.305024
+min        308.000000
+25%        752.000000
+50%        756.000000
+75%       1331.000000
+max       1412.000000
+Name: run, dtype: float64
+count    10000.0
+mean       301.0
+std          0.0
+min        301.0
+25%        301.0
+50%        301.0
+75%        301.0
+max        301.0
+Name: rerun, dtype: float64
+count    10000.000000
+mean         3.648700
+std          1.666183
+min          1.000000
+25%          2.000000
+50%          4.000000
+75%          5.000000
+max          6.000000
+Name: camcol, dtype: float64
+count    10000.000000
+mean       302.380100
+std        162.577763
+min         11.000000
+25%        184.000000
+50%        299.000000
+75%        414.000000
+max        768.000000
+Name: field, dtype: float64
+count    1.000000e+04
+mean     1.645022e+18
+std      2.013998e+18
+min      2.995780e+17
+25%      3.389248e+17
+50%      4.966580e+17
+75%      2.881300e+18
+max      9.468830e+18
+Name: specobjid, dtype: float64
+count      10000
+unique         3
+top       GALAXY
+freq        4998
+Name: class, dtype: object
+count    10000.000000
+mean         0.143726
+std          0.388774
+min         -0.004136
+25%          0.000081
+50%          0.042591
+75%          0.092579
+max          5.353854
+Name: redshift, dtype: float64
+count    10000.000000
+mean      1460.986400
+std       1788.778371
+min        266.000000
+25%        301.000000
+50%        441.000000
+75%       2559.000000
+max       8410.000000
+Name: plate, dtype: float64
+count    10000.000000
+mean     52943.533300
+std       1511.150651
+min      51578.000000
+25%      51900.000000
+50%      51997.000000
+75%      54468.000000
+max      57481.000000
+Name: mjd, dtype: float64
+count    10000.000000
+mean       353.069400
+std        206.298149
+min          1.000000
+25%        186.750000
+50%        351.000000
+75%        510.000000
+max       1000.000000
+Name: fiberid, dtype: float64
+count     10000
+unique        3
+top           H
+freq       3369
+Name: partition, dtype: object
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_hide-output docutils container">
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## # Don&#39;t want to mess up the original data</span>
+<span class="n">df_copy</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+<span class="n">results</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">df_copy</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">df_copy</span><span class="p">[</span><span class="n">c</span><span class="p">]</span><span class="o">.</span><span class="n">dtype</span> <span class="o">==</span> <span class="s2">&quot;object&quot;</span><span class="p">:</span>
+        <span class="k">break</span>
+    <span class="k">elif</span> <span class="n">df_copy</span><span class="p">[</span><span class="n">c</span><span class="p">]</span><span class="o">.</span><span class="n">dtype</span> <span class="ow">in</span> <span class="p">[</span>
+        <span class="s2">&quot;int64&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;float64&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;int32&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;float32&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;int16&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;float16&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;int8&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;float8&quot;</span><span class="p">,</span>
+    <span class="p">]:</span>
+        <span class="c1"># take Xth percentile</span>
+        <span class="n">results</span><span class="p">[</span><span class="n">c</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="n">df_copy</span><span class="p">[</span><span class="n">c</span><span class="p">]</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.25</span><span class="p">),</span>
+            <span class="n">df_copy</span><span class="p">[</span><span class="n">c</span><span class="p">]</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.5</span><span class="p">),</span>
+            <span class="n">df_copy</span><span class="p">[</span><span class="n">c</span><span class="p">]</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.75</span><span class="p">),</span>
+        <span class="p">]</span>
+
+<span class="c1"># Create a new dataframe</span>
+<span class="n">df_results</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">results</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">df_results</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">df_results</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>          objid          ra        dec          u          g          r  \
+0  1.237650e+18  157.370946  -0.539035  18.178035  16.815100  16.173333   
+1  1.237650e+18  180.394514   0.404166  18.853095  17.495135  16.858770   
+2  1.237650e+18  201.547279  35.649397  19.259232  18.010145  17.512675   
+
+           i          z     run  rerun  camcol  field     specobjid  
+0  15.853705  15.618285   752.0  301.0     2.0  184.0  3.389248e+17  
+1  16.554985  16.389945   756.0  301.0     4.0  299.0  4.966580e+17  
+2  17.258550  17.141447  1331.0  301.0     5.0  414.0  2.881300e+18  
+
+
+&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## keep scientific notation but cap at 2 decimal places</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">float_format</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">{:,.2f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df_results</span><span class="o">.</span><span class="n">T</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                                     0                            1  \
+objid     1,237,650,000,000,000,000.00 1,237,650,000,000,000,000.00   
+ra                              157.37                       180.39   
+dec                              -0.54                         0.40   
+u                                18.18                        18.85   
+g                                16.82                        17.50   
+r                                16.17                        16.86   
+i                                15.85                        16.55   
+z                                15.62                        16.39   
+run                             752.00                       756.00   
+rerun                           301.00                       301.00   
+camcol                            2.00                         4.00   
+field                           184.00                       299.00   
+specobjid   338,924,750,000,000,000.00   496,658,000,000,000,000.00   
+
+                                     2  
+objid     1,237,650,000,000,000,000.00  
+ra                              201.55  
+dec                              35.65  
+u                                19.26  
+g                                18.01  
+r                                17.51  
+i                                17.26  
+z                                17.14  
+run                           1,331.00  
+rerun                           301.00  
+camcol                            5.00  
+field                           414.00  
+specobjid 2,881,300,000,000,000,000.00  
+</pre></div>
+</div>
+</div>
+</div>
+<section id="using-skimpy-to-automate-a-lot-of-this">
+<h2>Using skimpy to automate a lot of this<a class="headerlink" href="#using-skimpy-to-automate-a-lot-of-this" title="Permalink to this heading">#</a></h2>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">skimpy</span> <span class="kn">import</span> <span class="n">skim</span>
+
+<span class="c1"># suppress warnings</span>
+<span class="kn">import</span> <span class="nn">warnings</span>
+
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s2">&quot;ignore&quot;</span><span class="p">)</span>
+
+<span class="n">skim</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<div class="output text_html"><pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">╭──────────────────────────────────────────────── skimpy summary ─────────────────────────────────────────────────╮
+│ <span style="font-style: italic">         Data Summary         </span> <span style="font-style: italic">      Data Types       </span>                                                          │
+│ ┏━━━━━━━━━━━━━━━━━━━┳━━━━━━━━┓ ┏━━━━━━━━━━━━━┳━━━━━━━┓                                                          │
+│ ┃<span style="color: #008080; text-decoration-color: #008080; font-weight: bold"> dataframe         </span>┃<span style="color: #008080; text-decoration-color: #008080; font-weight: bold"> Values </span>┃ ┃<span style="color: #008080; text-decoration-color: #008080; font-weight: bold"> Column Type </span>┃<span style="color: #008080; text-decoration-color: #008080; font-weight: bold"> Count </span>┃                                                          │
+│ ┡━━━━━━━━━━━━━━━━━━━╇━━━━━━━━┩ ┡━━━━━━━━━━━━━╇━━━━━━━┩                                                          │
+│ │ Number of rows    │ 10000  │ │ float64     │ 10    │                                                          │
+│ │ Number of columns │ 19     │ │ int64       │ 7     │                                                          │
+│ └───────────────────┴────────┘ │ string      │ 2     │                                                          │
+│                                └─────────────┴───────┘                                                          │
+│ <span style="font-style: italic">                                                    number                                                    </span>  │
+│ ┏━━━━━━━━━━━━━━━━┳━━━━━┳━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━┳━━━━━━━━━━┳━━━━━━━━┓  │
+│ ┃<span style="font-weight: bold"> column_name    </span>┃<span style="font-weight: bold"> NA  </span>┃<span style="font-weight: bold"> NA %   </span>┃<span style="font-weight: bold"> mean      </span>┃<span style="font-weight: bold"> sd      </span>┃<span style="font-weight: bold"> p0        </span>┃<span style="font-weight: bold"> p25       </span>┃<span style="font-weight: bold"> p75      </span>┃<span style="font-weight: bold"> p100     </span>┃<span style="font-weight: bold"> hist   </span>┃  │
+│ ┡━━━━━━━━━━━━━━━━╇━━━━━╇━━━━━━━━╇━━━━━━━━━━━╇━━━━━━━━━╇━━━━━━━━━━━╇━━━━━━━━━━━╇━━━━━━━━━━╇━━━━━━━━━━╇━━━━━━━━┩  │
+│ │ <span style="color: #af87ff; text-decoration-color: #af87ff">objid         </span> │ <span style="color: #008080; text-decoration-color: #008080">  0</span> │ <span style="color: #008080; text-decoration-color: #008080">     0</span> │ <span style="color: #008080; text-decoration-color: #008080">  1.2e+18</span> │ <span style="color: #008080; text-decoration-color: #008080">      0</span> │ <span style="color: #008080; text-decoration-color: #008080">  1.2e+18</span> │ <span style="color: #008080; text-decoration-color: #008080">  1.2e+18</span> │ <span style="color: #008080; text-decoration-color: #008080"> 1.2e+18</span> │ <span style="color: #008080; text-decoration-color: #008080"> 1.2e+18</span> │ <span style="color: #008000; text-decoration-color: #008000">      </span> │  │
+│ │ <span style="color: #af87ff; text-decoration-color: #af87ff">ra            </span> │ <span style="color: #008080; text-decoration-color: #008080">  0</span> │ <span style="color: #008080; text-decoration-color: #008080">     0</span> │ <span style="color: #008080; text-decoration-color: #008080">      180</span> │ <span style="color: #008080; text-decoration-color: #008080">     48</span> │ <span style="color: #008080; text-decoration-color: #008080">      8.2</span> │ <span style="color: #008080; text-decoration-color: #008080">      160</span> │ <span style="color: #008080; text-decoration-color: #008080">     200</span> │ <span style="color: #008080; text-decoration-color: #008080">     260</span> │ <span style="color: #008000; text-decoration-color: #008000">▁ ▂▇█▄</span> │  │
+│ │ <span style="color: #af87ff; text-decoration-color: #af87ff">dec           </span> │ <span style="color: #008080; text-decoration-color: #008080">  0</span> │ <span style="color: #008080; text-decoration-color: #008080">     0</span> │ <span style="color: #008080; text-decoration-color: #008080">       15</span> │ <span style="color: #008080; text-decoration-color: #008080">     25</span> │ <span style="color: #008080; text-decoration-color: #008080">     -5.4</span> │ <span style="color: #008080; text-decoration-color: #008080">    -0.54</span> │ <span style="color: #008080; text-decoration-color: #008080">      36</span> │ <span style="color: #008080; text-decoration-color: #008080">      69</span> │ <span style="color: #008000; text-decoration-color: #008000">█   ▁▂</span> │  │
+│ │ <span style="color: #af87ff; text-decoration-color: #af87ff">u             </span> │ <span style="color: #008080; text-decoration-color: #008080">  0</span> │ <span style="color: #008080; text-decoration-color: #008080">     0</span> │ <span style="color: #008080; text-decoration-color: #008080">       19</span> │ <span style="color: #008080; text-decoration-color: #008080">   0.83</span> │ <span style="color: #008080; text-decoration-color: #008080">       13</span> │ <span style="color: #008080; text-decoration-color: #008080">       18</span> │ <span style="color: #008080; text-decoration-color: #008080">      19</span> │ <span style="color: #008080; text-decoration-color: #008080">      20</span> │ <span style="color: #008000; text-decoration-color: #008000">   ▁▃█</span> │  │
+│ │ <span style="color: #af87ff; text-decoration-color: #af87ff">g             </span> │ <span style="color: #008080; text-decoration-color: #008080">  0</span> │ <span style="color: #008080; text-decoration-color: #008080">     0</span> │ <span style="color: #008080; text-decoration-color: #008080">       17</span> │ <span style="color: #008080; text-decoration-color: #008080">   0.95</span> │ <span style="color: #008080; text-decoration-color: #008080">       13</span> │ <span style="color: #008080; text-decoration-color: #008080">       17</span> │ <span style="color: #008080; text-decoration-color: #008080">      18</span> │ <span style="color: #008080; text-decoration-color: #008080">      20</span> │ <span style="color: #008000; text-decoration-color: #008000">  ▂▇█▁</span> │  │
+│ │ <span style="color: #af87ff; text-decoration-color: #af87ff">r             </span> │ <span style="color: #008080; text-decoration-color: #008080">  0</span> │ <span style="color: #008080; text-decoration-color: #008080">     0</span> │ <span style="color: #008080; text-decoration-color: #008080">       17</span> │ <span style="color: #008080; text-decoration-color: #008080">    1.1</span> │ <span style="color: #008080; text-decoration-color: #008080">       12</span> │ <span style="color: #008080; text-decoration-color: #008080">       16</span> │ <span style="color: #008080; text-decoration-color: #008080">      18</span> │ <span style="color: #008080; text-decoration-color: #008080">      25</span> │ <span style="color: #008000; text-decoration-color: #008000">  ▅█▁ </span> │  │
+│ │ <span style="color: #af87ff; text-decoration-color: #af87ff">i             </span> │ <span style="color: #008080; text-decoration-color: #008080">  0</span> │ <span style="color: #008080; text-decoration-color: #008080">     0</span> │ <span style="color: #008080; text-decoration-color: #008080">       17</span> │ <span style="color: #008080; text-decoration-color: #008080">    1.1</span> │ <span style="color: #008080; text-decoration-color: #008080">       12</span> │ <span style="color: #008080; text-decoration-color: #008080">       16</span> │ <span style="color: #008080; text-decoration-color: #008080">      17</span> │ <span style="color: #008080; text-decoration-color: #008080">      28</span> │ <span style="color: #008000; text-decoration-color: #008000">  █▂  </span> │  │
+│ │ <span style="color: #af87ff; text-decoration-color: #af87ff">z             </span> │ <span style="color: #008080; text-decoration-color: #008080">  0</span> │ <span style="color: #008080; text-decoration-color: #008080">     0</span> │ <span style="color: #008080; text-decoration-color: #008080">       16</span> │ <span style="color: #008080; text-decoration-color: #008080">    1.2</span> │ <span style="color: #008080; text-decoration-color: #008080">       12</span> │ <span style="color: #008080; text-decoration-color: #008080">       16</span> │ <span style="color: #008080; text-decoration-color: #008080">      17</span> │ <span style="color: #008080; text-decoration-color: #008080">      23</span> │ <span style="color: #008000; text-decoration-color: #008000">  ▂█▃ </span> │  │
+│ │ <span style="color: #af87ff; text-decoration-color: #af87ff">run           </span> │ <span style="color: #008080; text-decoration-color: #008080">  0</span> │ <span style="color: #008080; text-decoration-color: #008080">     0</span> │ <span style="color: #008080; text-decoration-color: #008080">      980</span> │ <span style="color: #008080; text-decoration-color: #008080">    270</span> │ <span style="color: #008080; text-decoration-color: #008080">      310</span> │ <span style="color: #008080; text-decoration-color: #008080">      750</span> │ <span style="color: #008080; text-decoration-color: #008080">    1300</span> │ <span style="color: #008080; text-decoration-color: #008080">    1400</span> │ <span style="color: #008000; text-decoration-color: #008000">  █▁▁▅</span> │  │
+│ │ <span style="color: #af87ff; text-decoration-color: #af87ff">rerun         </span> │ <span style="color: #008080; text-decoration-color: #008080">  0</span> │ <span style="color: #008080; text-decoration-color: #008080">     0</span> │ <span style="color: #008080; text-decoration-color: #008080">      300</span> │ <span style="color: #008080; text-decoration-color: #008080">      0</span> │ <span style="color: #008080; text-decoration-color: #008080">      300</span> │ <span style="color: #008080; text-decoration-color: #008080">      300</span> │ <span style="color: #008080; text-decoration-color: #008080">     300</span> │ <span style="color: #008080; text-decoration-color: #008080">     300</span> │ <span style="color: #008000; text-decoration-color: #008000">    █ </span> │  │
+│ │ <span style="color: #af87ff; text-decoration-color: #af87ff">camcol        </span> │ <span style="color: #008080; text-decoration-color: #008080">  0</span> │ <span style="color: #008080; text-decoration-color: #008080">     0</span> │ <span style="color: #008080; text-decoration-color: #008080">      3.6</span> │ <span style="color: #008080; text-decoration-color: #008080">    1.7</span> │ <span style="color: #008080; text-decoration-color: #008080">        1</span> │ <span style="color: #008080; text-decoration-color: #008080">        2</span> │ <span style="color: #008080; text-decoration-color: #008080">       5</span> │ <span style="color: #008080; text-decoration-color: #008080">       6</span> │ <span style="color: #008000; text-decoration-color: #008000">▆▇▇███</span> │  │
+│ │ <span style="color: #af87ff; text-decoration-color: #af87ff">field         </span> │ <span style="color: #008080; text-decoration-color: #008080">  0</span> │ <span style="color: #008080; text-decoration-color: #008080">     0</span> │ <span style="color: #008080; text-decoration-color: #008080">      300</span> │ <span style="color: #008080; text-decoration-color: #008080">    160</span> │ <span style="color: #008080; text-decoration-color: #008080">       11</span> │ <span style="color: #008080; text-decoration-color: #008080">      180</span> │ <span style="color: #008080; text-decoration-color: #008080">     410</span> │ <span style="color: #008080; text-decoration-color: #008080">     770</span> │ <span style="color: #008000; text-decoration-color: #008000">▄▅█▃▃ </span> │  │
+│ │ <span style="color: #af87ff; text-decoration-color: #af87ff">specobjid     </span> │ <span style="color: #008080; text-decoration-color: #008080">  0</span> │ <span style="color: #008080; text-decoration-color: #008080">     0</span> │ <span style="color: #008080; text-decoration-color: #008080">  1.6e+18</span> │ <span style="color: #008080; text-decoration-color: #008080">  2e+18</span> │ <span style="color: #008080; text-decoration-color: #008080">    3e+17</span> │ <span style="color: #008080; text-decoration-color: #008080">  3.4e+17</span> │ <span style="color: #008080; text-decoration-color: #008080"> 2.9e+18</span> │ <span style="color: #008080; text-decoration-color: #008080"> 9.5e+18</span> │ <span style="color: #008000; text-decoration-color: #008000"> █▂▁  </span> │  │
+│ │ <span style="color: #af87ff; text-decoration-color: #af87ff">redshift      </span> │ <span style="color: #008080; text-decoration-color: #008080">  0</span> │ <span style="color: #008080; text-decoration-color: #008080">     0</span> │ <span style="color: #008080; text-decoration-color: #008080">     0.14</span> │ <span style="color: #008080; text-decoration-color: #008080">   0.39</span> │ <span style="color: #008080; text-decoration-color: #008080">  -0.0041</span> │ <span style="color: #008080; text-decoration-color: #008080">  8.1e-05</span> │ <span style="color: #008080; text-decoration-color: #008080">   0.093</span> │ <span style="color: #008080; text-decoration-color: #008080">     5.4</span> │ <span style="color: #008000; text-decoration-color: #008000">  █   </span> │  │
+│ │ <span style="color: #af87ff; text-decoration-color: #af87ff">plate         </span> │ <span style="color: #008080; text-decoration-color: #008080">  0</span> │ <span style="color: #008080; text-decoration-color: #008080">     0</span> │ <span style="color: #008080; text-decoration-color: #008080">     1500</span> │ <span style="color: #008080; text-decoration-color: #008080">   1800</span> │ <span style="color: #008080; text-decoration-color: #008080">      270</span> │ <span style="color: #008080; text-decoration-color: #008080">      300</span> │ <span style="color: #008080; text-decoration-color: #008080">    2600</span> │ <span style="color: #008080; text-decoration-color: #008080">    8400</span> │ <span style="color: #008000; text-decoration-color: #008000"> █▂▁  </span> │  │
+│ │ <span style="color: #af87ff; text-decoration-color: #af87ff">mjd           </span> │ <span style="color: #008080; text-decoration-color: #008080">  0</span> │ <span style="color: #008080; text-decoration-color: #008080">     0</span> │ <span style="color: #008080; text-decoration-color: #008080">    53000</span> │ <span style="color: #008080; text-decoration-color: #008080">   1500</span> │ <span style="color: #008080; text-decoration-color: #008080">    52000</span> │ <span style="color: #008080; text-decoration-color: #008080">    52000</span> │ <span style="color: #008080; text-decoration-color: #008080">   54000</span> │ <span style="color: #008080; text-decoration-color: #008080">   57000</span> │ <span style="color: #008000; text-decoration-color: #008000"> █ ▁▂ </span> │  │
+│ │ <span style="color: #af87ff; text-decoration-color: #af87ff">fiberid       </span> │ <span style="color: #008080; text-decoration-color: #008080">  0</span> │ <span style="color: #008080; text-decoration-color: #008080">     0</span> │ <span style="color: #008080; text-decoration-color: #008080">      350</span> │ <span style="color: #008080; text-decoration-color: #008080">    210</span> │ <span style="color: #008080; text-decoration-color: #008080">        1</span> │ <span style="color: #008080; text-decoration-color: #008080">      190</span> │ <span style="color: #008080; text-decoration-color: #008080">     510</span> │ <span style="color: #008080; text-decoration-color: #008080">    1000</span> │ <span style="color: #008000; text-decoration-color: #008000">▇██▇▁▁</span> │  │
+│ └────────────────┴─────┴────────┴───────────┴─────────┴───────────┴───────────┴──────────┴──────────┴────────┘  │
+│ <span style="font-style: italic">                                                    string                                                    </span>  │
+│ ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━┳━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━┓  │
+│ ┃<span style="font-weight: bold"> column_name               </span>┃<span style="font-weight: bold"> NA      </span>┃<span style="font-weight: bold"> NA %       </span>┃<span style="font-weight: bold"> words per row                </span>┃<span style="font-weight: bold"> total words              </span>┃  │
+│ ┡━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━╇━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━┩  │
+│ │ <span style="color: #af87ff; text-decoration-color: #af87ff">class                    </span> │ <span style="color: #008080; text-decoration-color: #008080">      0</span> │ <span style="color: #008080; text-decoration-color: #008080">         0</span> │ <span style="color: #008080; text-decoration-color: #008080">                           1</span> │ <span style="color: #008080; text-decoration-color: #008080">                   10000</span> │  │
+│ │ <span style="color: #af87ff; text-decoration-color: #af87ff">partition                </span> │ <span style="color: #008080; text-decoration-color: #008080">      0</span> │ <span style="color: #008080; text-decoration-color: #008080">         0</span> │ <span style="color: #008080; text-decoration-color: #008080">                           1</span> │ <span style="color: #008080; text-decoration-color: #008080">                   10000</span> │  │
+│ └───────────────────────────┴─────────┴────────────┴──────────────────────────────┴──────────────────────────┘  │
+╰────────────────────────────────────────────────────── End ──────────────────────────────────────────────────────╯
+</pre>
+</div></div>
+</div>
+</section>
+<section id="pandas-profiling">
+<h2>Pandas profiling<a class="headerlink" href="#pandas-profiling" title="Permalink to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pandas_profiling</span> <span class="kn">import</span> <span class="n">ProfileReport</span>
+
+<span class="n">profile</span> <span class="o">=</span> <span class="n">ProfileReport</span><span class="p">(</span>
+    <span class="n">df</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Pandas Profiling Report&quot;</span><span class="p">,</span> <span class="n">html</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;style&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;full_width&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">}}</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="sidenotes-and-marginnotes">
+<h2>Sidenotes and marginnotes<a class="headerlink" href="#sidenotes-and-marginnotes" title="Permalink to this heading">#</a></h2>
+<p>Here’s a sentence<a class="footnote-reference brackets" href="#sn1" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> with multiple <a class="footnote-reference brackets" href="#sn2" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a> sidenotes.</p>
+<p>Here’s a sentence<a class="footnote-reference brackets" href="#mn1" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a> with multiple marginnotes<a class="footnote-reference brackets" href="#mn2" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a>.</p>
+<p>Sidenotes inside of admonitions should behave the same:</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>An admonition with a sidenote defined in the admonition<a class="footnote-reference brackets" href="#snam1" id="id5" role="doc-noteref"><span class="fn-bracket">[</span>5<span class="fn-bracket">]</span></a> and another defined outside of the admonition <a class="footnote-reference brackets" href="#snam2" id="id6" role="doc-noteref"><span class="fn-bracket">[</span>6<span class="fn-bracket">]</span></a>.</p>
+</div>
+</section>
+<section id="nested-admonitions">
+<h2>Nested admonitions<a class="headerlink" href="#nested-admonitions" title="Permalink to this heading">#</a></h2>
+<p>These aren’t theme-specific, but we still show below to make sure they work.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Here’s a note!</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>And a tip!</p>
+</div>
+</div>
+</section>
+<section id="myst-markdown-elements">
+<h2>MyST Markdown elements<a class="headerlink" href="#myst-markdown-elements" title="Permalink to this heading">#</a></h2>
+<p>Here are a few design elements to show off MyST Markdown.</p>
+<section id="table-alignment">
+<h3>Table alignment<a class="headerlink" href="#table-alignment" title="Permalink to this heading">#</a></h3>
+<p>To ensure that markdown alignment is rendered properly.</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Default Header</p></th>
+<th class="head text-left"><p>Left Align</p></th>
+<th class="head text-right"><p>Right Align</p></th>
+<th class="head text-center"><p>Center Align</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Cell 1</p></td>
+<td class="text-left"><p>Cell 2</p></td>
+<td class="text-right"><p>Cell 3</p></td>
+<td class="text-center"><p>Cell 4</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cell 1</p></td>
+<td class="text-left"><p>Cell 2</p></td>
+<td class="text-right"><p>Cell 3</p></td>
+<td class="text-center"><p>Cell 4</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="list-table-width">
+<h3>List table width<a class="headerlink" href="#list-table-width" title="Permalink to this heading">#</a></h3>
+<p>Testing list tables take width as expected.</p>
+<table class="table" style="width: 100%">
+<tbody>
+<tr class="row-odd"><td><p>a</p></td>
+<td><p>b</p></td>
+</tr>
+<tr class="row-even"><td><p>c</p></td>
+<td><p>d</p></td>
+</tr>
+</tbody>
+</table>
+<hr class="footnotes docutils" />
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="sn1" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
+<p>Test sidenote 1.</p>
+</aside>
+<aside class="footnote brackets" id="sn2" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">2</a><span class="fn-bracket">]</span></span>
+<p>Test sidenote 2.</p>
+</aside>
+<aside class="footnote brackets" id="mn1" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">3</a><span class="fn-bracket">]</span></span>
+<p>{-} Test marginnote 1.</p>
+</aside>
+<aside class="footnote brackets" id="mn2" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id4">4</a><span class="fn-bracket">]</span></span>
+<p>{-} Test marginnote 2.</p>
+</aside>
+<aside class="footnote brackets" id="snam1" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id5">5</a><span class="fn-bracket">]</span></span>
+<p>Sidenote defined in the admonition.</p>
+</aside>
+<aside class="footnote brackets" id="snam2" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id6">6</a><span class="fn-bracket">]</span></span>
+<p>Sidenote defined outside the admonition.</p>
+</aside>
+</aside>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="tables.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Tables</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-skimpy-to-automate-a-lot-of-this">Using skimpy to automate a lot of this</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pandas-profiling">Pandas profiling</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sidenotes-and-marginnotes">Sidenotes and marginnotes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nested-admonitions">Nested admonitions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#myst-markdown-elements">MyST Markdown elements</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#table-alignment">Table alignment</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#list-table-width">List table width</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            <div class="bd-footer-content__inner">
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book Community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div></div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

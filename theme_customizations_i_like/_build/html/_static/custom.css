@@ -1,0 +1,56 @@
+footer .bd-footer {
+  display: none;
+}
+
+footer.bd-footer-content .bd-footer-content__inner {
+  display: none;
+}
+
+h3 {
+  color: #459db9;
+  font-size: calc(var(--pst-font-size-h3) * 0.8);
+}
+.bd-sidebar-secondary .onthispage {
+  font-weight: bolder;
+  font-size: 1.2rem;
+  margin-bottom: 1em;
+  width: 100%;
+}
+
+.bottom-of-page {
+  display: none;
+}
+
+.sidebar-toggle[name="__toc"] {
+  left: 40px;
+}
+.sidebar-toggle:checked {
+  left: 60px;
+}
+
+/* these two are main controls */
+
+.bd-article.contqiner .bd-article .bd-article-content {
+  min-width: 100%;
+  max-width: 130%;
+}
+
+.bd-sidebar-secondary .bd-toc {
+  width: 75%;
+  visibility: hidden;
+}
+
+.bd-main .bd-content .bd-article-container details.above-input summary,
+.bd-main .bd-content .bd-article-container details.below-input summary {
+  border-left: 3px solid var(--pst-color-primary);
+}
+
+.bd-main .bd-content .bd-article-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  max-width: 80em;
+  overflow-x: auto;
+  padding: 1rem;
+  width: 100%;
+}
