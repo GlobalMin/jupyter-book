@@ -1,18 +1,73 @@
-:root {
-    --sd-color-primary: #f37726;
-    --sd-color-primary-highlight: #da864e;
-    --sd-color-secondary: #267bf3;
-    --sd-color-secondary-highlight: #4e88da;
-}
-
-.bg-jb-one {
-    background-color: #52d16f3b;
-}
-
-.bg-jb-two {
-    background-color: #e7dd7b73;
-}
-
-.bg-jb-three {
-    background-color: #e7b07b96;
-}
+/** Add a counter before subsections **/
+h1 {
+    counter-reset: subsection;
+  }
+  h2 {
+    counter-reset: subsubsection;
+  }
+  h2::before {
+    counter-increment: subsection;
+    content: counter(subsection) ". ";
+  }
+  h3::before {
+    counter-increment: subsubsection;
+    content: counter(subsection) "." counter(subsubsection)
+      ". ";
+  }
+  /* 
+  .bd-sidebar__bottom {
+    display: none;
+  }
+  */
+  .footer {
+    display: none;
+    max-width: max-content;
+  }
+  
+  #site-navigation div.navbar_extra_footer {
+    display: none;
+    border-image-width: 100%;
+  }
+  
+  /* Pandas tables. Pulled from the Jupyter / nbsphinx CSS */
+  @media print {
+    div.cell.tag_output_scroll div.cell_output,
+    div.cell.tag_scroll-output div.cell_output {
+      max-height: unset;
+      overflow-x: scroll;
+    }
+  }
+  
+  div.cell.tag_scroll-output div.cell_output {
+    max-height: 24em;
+    overflow-y: auto;
+    max-width: 100%;
+    overflow-x: auto;
+  }
+  /**/
+  div.cell.tag_scroll-output
+    div.cell_output::-webkit-scrollbar {
+    width: 0.3rem;
+    height: 0.3rem;
+  }
+  
+  div.cell.tag_scroll-output
+    div.cell_output::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 0.25rem;
+  }
+  
+  div.cell.tag_scroll-output
+    div.cell_output::-webkit-scrollbar-thumb:hover {
+    background: #a0a0a0;
+  }
+  
+  @media print {
+    div.cell.tag_scroll-output div.cell_output {
+      max-height: unset;
+      overflow-y: visible;
+      max-width: unset;
+      overflow-x: visible;
+    }
+  }
+  
